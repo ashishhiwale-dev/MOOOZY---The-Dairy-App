@@ -33,6 +33,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please select a location'],
     },
+    markerPosition: { // Define markerPosition field to store coordinates
+        type: {
+            latitude: Number,
+            longitude: Number
+        },
+    
+    },
     role: {
         type: String,
         enum: ['seller', 'buyer'], // Define allowed roles
